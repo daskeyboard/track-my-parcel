@@ -5,12 +5,23 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "repository": "git@github.com:Mubramaj/track-my-package.git",
   "author": "AhmedLoud <ahmed.loudghiri@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "rxjs": "^6.4.0"
   }
 }
