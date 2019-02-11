@@ -2,8 +2,14 @@
   "name": "track-my-parcel",
   "version": "1.0.0",
   "description": "Module to track a package",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "prepare": "yarn build",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postVersion": "git push && git push --tags",
+    "prepublishOnly": "yarn test && yarn lint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -12,7 +18,15 @@
   "files": [
     "lib/**/*"
   ],
-  "repository": "https://github.com/daskeyboard/track-my-parcel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daskeyboard/track-my-parcel.git"
+  },
+  "keywords": [
+    "Parcel",
+    "Tracking",
+    "Track"
+  ],
   "author": "AhmedLoud <ahmed.loudghiri@gmail.com>",
   "license": "MIT",
   "devDependencies": {
