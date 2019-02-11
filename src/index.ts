@@ -18,8 +18,10 @@ import { UPS } from './carriers/ups';
 //   console.log('sldkfj', err);
 // })
 
-export const Track = (trackingNumber: string, callback: (infos: ITrackingInfo) => void): void => {
+export const Track = (trackingNumber: string, callback: (infos: ITrackingInfo, err: any) => void): void => {
   const upsTracker = new UPS(trackingNumber).getPackageInformation().subscribe((infos: ITrackingInfo) => {
-    callback(infos);
+    callback(infos, null);
+  }, (err) => {
+    callback({} as ITrackingInfo, err);
   });
 };
