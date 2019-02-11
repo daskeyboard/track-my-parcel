@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "Module to track a package",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
   "repository": "git@github.com:Mubramaj/track-my-package.git",
   "author": "AhmedLoud <ahmed.loudghiri@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.3.3"
+  }
 }
