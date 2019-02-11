@@ -1,0 +1,9 @@
+{
+  "name": "track-my-package",
+  "version": "1.0.0",
+  "description": "Module to track a package",
+  "main": "index.js",
+  "repository": "git@github.com:Mubramaj/track-my-package.git",
+  "author": "AhmedLoud <ahmed.loudghiri@gmail.com>",
+  "license": "MIT"
+}
