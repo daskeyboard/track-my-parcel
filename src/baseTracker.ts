@@ -17,7 +17,7 @@ export abstract class PackageTracker {
   /**
    * Given a tracking number,
    * Will get tracking information
-   * @param trackingNumber 
+   * @param trackingNumber
    */
   public abstract getPackageInformation(): Observable<ITrackingInfo>;
 }

@@ -1,5 +1,5 @@
-import { ITrackingInfo } from "./baseTracker";
-import { UPS } from "./carriers/ups";
+import { ITrackingInfo } from './baseTracker';
+import { UPS } from './carriers/ups';
 
 // import { UPS } from "./carriers/ups";
 
@@ -19,9 +19,7 @@ import { UPS } from "./carriers/ups";
 // })
 
 export const Track = (trackingNumber: string, callback: (infos: ITrackingInfo) => void): void => {
-  const upsTracker = new UPS(trackingNumber).getPackageInformation().subscribe(
-    (infos: ITrackingInfo) => {
-      callback(infos);
-    });
-
-}
+  const upsTracker = new UPS(trackingNumber).getPackageInformation().subscribe((infos: ITrackingInfo) => {
+    callback(infos);
+  });
+};
