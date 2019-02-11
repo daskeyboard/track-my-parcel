@@ -1,5 +1,5 @@
 {
-  "name": "track-my-package",
+  "name": "track-my-parcel",
   "version": "1.0.0",
   "description": "Module to track a package",
   "main": "index.js",
@@ -12,16 +12,19 @@
   "files": [
     "lib/**/*"
   ],
-  "repository": "git@github.com:Mubramaj/track-my-package.git",
+  "repository": "https://github.com/daskeyboard/track-my-parcel",
   "author": "AhmedLoud <ahmed.loudghiri@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/request-promise": "^4.1.42",
     "prettier": "^1.16.4",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.3"
   },
   "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
     "rxjs": "^6.4.0"
   }
 }

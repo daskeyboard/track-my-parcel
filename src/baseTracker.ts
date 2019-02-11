@@ -1,4 +1,4 @@
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 export interface ITrackingInfo {
   statusLabel: string;
@@ -14,6 +14,11 @@ export abstract class PackageTracker {
     this.trackingNumber = trackingNumber;
   }
 
+  /**
+   * Given a tracking number,
+   * Will get tracking information
+   * @param trackingNumber 
+   */
   public abstract getPackageInformation(): Observable<ITrackingInfo>;
 }
 
