@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { ITrackingInfo, PackageTracker } from '../baseTracker';
 
 const trackingBaseUrl = 'https://www.ups.com/track/api/Track/GetStatus?loc=en_US';
+const STATUS_TYPES = ['D', 'P', 'M', 'I'];
 
 export class UPS extends PackageTracker {
   public getPackageInformation(): Observable<ITrackingInfo> {
@@ -41,7 +42,13 @@ export class UPS extends PackageTracker {
   private handleUPSResponse(response: any): ITrackingInfo {
     let label = '';
     let percentage = 0;
-    if (response.trackDetails && response.trackDetails.length > 0) {
+    if (!response.trackDetails) {
+      throw new Error(`Error when handling response from UPS`);
+    }
+    if (response.trackDetails.length > 0) {
+      if (!STATUS_TYPES.includes(response.packageStatusType)) {
+        throw new Error(`Status type not recognized for UPS`);
+      }
       label = response.trackDetails[0].packageStatus;
       percentage = response.trackDetails[0].progressBarPercentage;
     }
