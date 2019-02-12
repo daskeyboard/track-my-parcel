@@ -7,7 +7,6 @@ import { handleError } from '../utilities';
 const trackingBaseUrl = 'https://www.fedex.com/trackingCal/track';
 
 export class Fedex extends PackageTracker {
-
   constructor(trackingNumber: string) {
     super(trackingNumber);
     this.carrierName = 'Fedex';

@@ -12,7 +12,6 @@ export interface ITrackingInfo {
  * The base class to track packages
  */
 export abstract class PackageTracker {
-
   public carrierName: string;
 
   /**

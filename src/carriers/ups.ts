@@ -7,7 +7,6 @@ import { handleError } from '../utilities';
 const trackingBaseUrl = 'https://www.ups.com/track/api/Track/GetStatus?loc=en_US';
 
 export class UPS extends PackageTracker {
-
   constructor(trackingNumber: string) {
     super(trackingNumber);
     this.carrierName = 'UPS';
@@ -16,11 +15,14 @@ export class UPS extends PackageTracker {
   public isTrackingNumberFromCarrier(): Observable<boolean> {
     return this.getPackageInformationFromCarrier().pipe(
       map((response: any) => {
-        if (response && +response.statusCode === 200
-          && response.trackDetails
-          && response.trackDetails.length > 0
-          && +response.trackDetails[0].errorCode === 0) {
-          return true
+        if (
+          response &&
+          +response.statusCode === 200 &&
+          response.trackDetails &&
+          response.trackDetails.length > 0 &&
+          +response.trackDetails[0].errorCode === 0
+        ) {
+          return true;
         } else {
           return false;
         }
@@ -68,7 +70,7 @@ export class UPS extends PackageTracker {
       carrierName: this.carrierName,
       detailsLink: this.getDetailsLink(),
       statusLabel: label,
-      statusPercentage: percentage
+      statusPercentage: percentage,
     } as ITrackingInfo;
   }
 
