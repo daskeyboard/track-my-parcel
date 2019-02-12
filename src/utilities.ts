@@ -13,7 +13,7 @@ import { Observable, of } from 'rxjs';
  */
 export function handleError<T>(operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
-    console.error(`${operation} failed: ${error.message}`); // log the error
+    // console.error(`${operation} failed: ${error.message}`); // log the error
     // Let the app keep running by returning an empty result.
     return of(result as T);
   };
