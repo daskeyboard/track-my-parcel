@@ -11,7 +11,8 @@ export class Fedex extends PackageTracker {
   public isTrackingNumberFromCarrier(): Observable<boolean> {
     return this.getPackageInformationFromCarrier().pipe(
       map((response: any) => {
-        // console.log('response', response);
+        /* This part is still fuzzy. We assume that a tracking number from fedex
+         is valid if there is a keyStatusCD in the response*/
         response = JSON.parse(response);
         if (response.TrackPackagesResponse
           && response.TrackPackagesResponse.successful
