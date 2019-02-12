@@ -1,11 +1,11 @@
 {
   "name": "track-my-parcel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Module to track a package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "start":"yarn build && node lib/index.js",
+    "start": "yarn build && node lib/index.js",
     "prepare": "yarn build",
     "preversion": "yarn lint",
     "version": "yarn format && git add -A src",

@@ -1,7 +1,6 @@
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-
 export interface ITrackingInfo {
   statusLabel: string;
   statusPercentage: number;
@@ -12,7 +11,6 @@ export interface ITrackingInfo {
  * The base class to track packages
  */
 export abstract class PackageTracker {
-
   /**
    * Given a tracking number should return an observable that resolve to:
    * - true if the tracking number is from this carrier
@@ -30,7 +28,7 @@ export abstract class PackageTracker {
     return this.getPackageInformationFromCarrier().pipe(
       map((response: any) => {
         return this.resolveCarrierResponseToITrackingInfo(response);
-      })
+      }),
     );
   }
 
@@ -53,8 +51,4 @@ export abstract class PackageTracker {
    * @param response
    */
   protected abstract resolveCarrierResponseToITrackingInfo(response: any): ITrackingInfo;
-
 }
-
-
-

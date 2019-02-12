@@ -7,52 +7,53 @@ import { handleError } from '../utilities';
 const trackingBaseUrl = 'https://www.fedex.com/trackingCal/track';
 
 export class Fedex extends PackageTracker {
-
   public isTrackingNumberFromCarrier(): Observable<boolean> {
     return this.getPackageInformationFromCarrier().pipe(
       map((response: any) => {
         /* This part is still fuzzy. We assume that a tracking number from fedex
          is valid if there is a keyStatusCD in the response*/
         response = JSON.parse(response);
-        if (response.TrackPackagesResponse
-          && response.TrackPackagesResponse.successful
-          && response.TrackPackagesResponse.packageList
-          && response.TrackPackagesResponse.packageList.length !== 0
-          && response.TrackPackagesResponse.packageList[0].keyStatusCD
-          && response.TrackPackagesResponse.packageList[0].keyStatusCD.length > 0) {
+        if (
+          response.TrackPackagesResponse &&
+          response.TrackPackagesResponse.successful &&
+          response.TrackPackagesResponse.packageList &&
+          response.TrackPackagesResponse.packageList.length !== 0 &&
+          response.TrackPackagesResponse.packageList[0].keyStatusCD &&
+          response.TrackPackagesResponse.packageList[0].keyStatusCD.length > 0
+        ) {
           return true;
         } else {
           return false;
-        };
+        }
       }),
-      catchError(handleError(`isTrackingNumberFromCarrier Fedex`, false))
-    )
+      catchError(handleError(`isTrackingNumberFromCarrier Fedex`, false)),
+    );
   }
 
   protected getPackageInformationFromCarrier(): Observable<any> {
     const data = {
-      "TrackPackagesRequest": {
-        "trackingInfoList": [
+      TrackPackagesRequest: {
+        trackingInfoList: [
           {
-            "trackNumberInfo": {
-              "trackingCarrier": "",
-              "trackingNumber": `${this.trackingNumber}`,
-              "trackingQualifier": ""
-            }
-          }
-        ]
-      }
-    }
+            trackNumberInfo: {
+              trackingCarrier: '',
+              trackingNumber: `${this.trackingNumber}`,
+              trackingQualifier: '',
+            },
+          },
+        ],
+      },
+    };
 
     const options = {
       form: {
         action: 'trackpackages',
         data: JSON.stringify(data),
-        format: 'json'
+        format: 'json',
       },
       method: 'POST',
       uri: trackingBaseUrl,
-    }
+    };
 
     // construct observable from promise
     return from(request(options));
@@ -69,12 +70,13 @@ export class Fedex extends PackageTracker {
     /**
      * Throw error if unable to handle package response
      */
-    if (!response.TrackPackagesResponse
-      || !response.TrackPackagesResponse.packageList
-      || response.TrackPackagesResponse.packageList.length === 0) {
+    if (
+      !response.TrackPackagesResponse ||
+      !response.TrackPackagesResponse.packageList ||
+      response.TrackPackagesResponse.packageList.length === 0
+    ) {
       throw new Error(`Error when handling response from Fedex`);
     }
-
 
     // For the moment we only handle the first package of the list.
     // TODO Find better handling implementation
@@ -101,8 +103,7 @@ export class Fedex extends PackageTracker {
 
     return {
       statusLabel: label,
-      statusPercentage: percentage
+      statusPercentage: percentage,
     } as ITrackingInfo;
   }
-
 }
