@@ -1,11 +1,10 @@
 import * as request from 'request-promise';
-import { from, Observable, of } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { ITrackingInfo, PackageTracker } from '../baseTracker';
 import { handleError } from '../utilities';
 
 const trackingBaseUrl = 'https://www.ups.com/track/api/Track/GetStatus?loc=en_US';
-const STATUS_TYPES = ['D', 'P', 'M', 'I'];
 
 export class UPS extends PackageTracker {
 
@@ -51,15 +50,17 @@ export class UPS extends PackageTracker {
       throw new Error(`Error when handling response from UPS`);
     }
     if (response.trackDetails.length > 0) {
-      if (!STATUS_TYPES.includes(response.packageStatusType)) {
-        throw new Error(`Status type not recognized for UPS`);
-      }
       label = response.trackDetails[0].packageStatus;
       percentage = response.trackDetails[0].progressBarPercentage;
     }
     return {
+      detailsLink: this.getDetailsLink(),
       statusLabel: label,
       statusPercentage: percentage,
     } as ITrackingInfo;
+  }
+
+  private getDetailsLink(): string {
+    return `https://www.ups.com/track?loc=en_US&tracknum=${this.trackingNumber}&requester=WT/trackdetails`;
   }
 }

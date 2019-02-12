@@ -1,9 +1,11 @@
-import { from, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+
 
 export interface ITrackingInfo {
   statusLabel: string;
   statusPercentage: number;
+  detailsLink: string | undefined;
 }
 
 /**
@@ -53,3 +55,6 @@ export abstract class PackageTracker {
   protected abstract resolveCarrierResponseToITrackingInfo(response: any): ITrackingInfo;
 
 }
+
+
+

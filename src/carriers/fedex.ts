@@ -1,5 +1,5 @@
 import * as request from 'request-promise';
-import { from, Observable, of } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { ITrackingInfo, PackageTracker } from '../baseTracker';
 import { handleError } from '../utilities';
@@ -102,7 +102,7 @@ export class Fedex extends PackageTracker {
     return {
       statusLabel: label,
       statusPercentage: percentage
-    }
+    } as ITrackingInfo;
   }
 
 }

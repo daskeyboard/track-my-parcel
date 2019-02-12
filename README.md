@@ -4,6 +4,11 @@
 Module to track packages from different carriers using only a tracking number.
 No account needed.
 
+Supported carrier:
+
+- UPS
+- Fedex
+
 # Usage
 
 ```shell
