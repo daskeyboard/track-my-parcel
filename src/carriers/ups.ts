@@ -12,7 +12,7 @@ export class UPS extends PackageTracker {
     super(trackingNumber);
     this.carrierName = 'UPS';
   }
-  
+
   public isTrackingNumberFromCarrier(): Observable<boolean> {
     return this.getPackageInformationFromCarrier().pipe(
       map((response: any) => {
@@ -65,9 +65,10 @@ export class UPS extends PackageTracker {
       percentage = response.trackDetails[0].progressBarPercentage;
     }
     return {
+      carrierName: this.carrierName,
       detailsLink: this.getDetailsLink(),
       statusLabel: label,
-      statusPercentage: percentage,
+      statusPercentage: percentage
     } as ITrackingInfo;
   }
 

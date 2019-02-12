@@ -5,6 +5,7 @@ export interface ITrackingInfo {
   statusLabel: string;
   statusPercentage: number;
   detailsLink: string | undefined;
+  carrierName: string;
 }
 
 /**

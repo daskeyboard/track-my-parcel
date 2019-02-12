@@ -7,6 +7,12 @@ import { handleError } from '../utilities';
 const trackingBaseUrl = 'https://www.fedex.com/trackingCal/track';
 
 export class Fedex extends PackageTracker {
+
+  constructor(trackingNumber: string) {
+    super(trackingNumber);
+    this.carrierName = 'Fedex';
+  }
+
   public isTrackingNumberFromCarrier(): Observable<boolean> {
     return this.getPackageInformationFromCarrier().pipe(
       map((response: any) => {
@@ -102,6 +108,7 @@ export class Fedex extends PackageTracker {
     }
 
     return {
+      carrierName: this.carrierName,
       statusLabel: label,
       statusPercentage: percentage,
     } as ITrackingInfo;
