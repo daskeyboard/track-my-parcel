@@ -46,6 +46,12 @@ To run
   node lib/index.js
 ```
 
+Or build and run by launching
+
+```shell
+  yarn start
+```
+
 # Tests
 
 TODO add tests
