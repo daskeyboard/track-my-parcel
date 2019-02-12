@@ -7,7 +7,7 @@ const trackingBaseUrl = 'https://www.fedex.com/trackingCal/track';
 
 export class Fedex extends PackageTracker {
 
-  public getPackageInformationFromCarrier(): Observable<any> {
+  protected getPackageInformationFromCarrier(): Observable<any> {
     const data = {
       "TrackPackagesRequest": {
         "trackingInfoList": [
@@ -33,13 +33,7 @@ export class Fedex extends PackageTracker {
     }
 
     // construct observable from promise
-    const observable = from(request(options));
-
-    return observable.pipe(
-      map((response: any) => {
-        return this.resolveCarrierResponseToITrackingInfo(response);
-      })
-    )
+    return from(request(options));
   }
 
   /**
