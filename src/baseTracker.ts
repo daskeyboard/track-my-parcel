@@ -10,6 +10,14 @@ export interface ITrackingInfo {
  * The base class to track packages
  */
 export abstract class PackageTracker {
+
+  /**
+   * Given a tracking number should return an observable that resolve to:
+   * - true if the tracking number is from this carrier
+   * - false otherwise
+   * @param trackingNumber
+   */
+
   public trackingNumber: string;
   constructor(trackingNumber: string) {
     this.trackingNumber = trackingNumber;
@@ -23,6 +31,8 @@ export abstract class PackageTracker {
       })
     );
   }
+
+  public abstract isTrackingNumberFromCarrier(): Observable<boolean>;
 
   /**
    * Given a tracking number,
@@ -41,4 +51,5 @@ export abstract class PackageTracker {
    * @param response
    */
   protected abstract resolveCarrierResponseToITrackingInfo(response: any): ITrackingInfo;
+
 }

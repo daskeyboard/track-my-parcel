@@ -1,11 +1,32 @@
 import * as request from 'request-promise';
 import { from, Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { ITrackingInfo, PackageTracker } from '../baseTracker';
+import { handleError } from '../utilities';
 
 const trackingBaseUrl = 'https://www.fedex.com/trackingCal/track';
 
 export class Fedex extends PackageTracker {
+
+  public isTrackingNumberFromCarrier(): Observable<boolean> {
+    return this.getPackageInformationFromCarrier().pipe(
+      map((response: any) => {
+        // console.log('response', response);
+        response = JSON.parse(response);
+        if (response.TrackPackagesResponse
+          && response.TrackPackagesResponse.successful
+          && response.TrackPackagesResponse.packageList
+          && response.TrackPackagesResponse.packageList.length !== 0
+          && response.TrackPackagesResponse.packageList[0].keyStatusCD
+          && response.TrackPackagesResponse.packageList[0].keyStatusCD.length > 0) {
+          return true;
+        } else {
+          return false;
+        };
+      }),
+      catchError(handleError(`isTrackingNumberFromCarrier Fedex`, false))
+    )
+  }
 
   protected getPackageInformationFromCarrier(): Observable<any> {
     const data = {
@@ -14,7 +35,7 @@ export class Fedex extends PackageTracker {
           {
             "trackNumberInfo": {
               "trackingCarrier": "",
-              "trackingNumber": "785378216031",
+              "trackingNumber": `${this.trackingNumber}`,
               "trackingQualifier": ""
             }
           }
@@ -74,7 +95,7 @@ export class Fedex extends PackageTracker {
         percentage = 100;
         break;
       default:
-        throw new Error(`Fedex status not recognized`);
+        percentage = 0;
     }
 
     return {
@@ -82,4 +103,5 @@ export class Fedex extends PackageTracker {
       statusPercentage: percentage
     }
   }
+
 }

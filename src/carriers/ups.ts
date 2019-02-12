@@ -1,5 +1,5 @@
 import * as request from 'request-promise';
-import { from, Observable } from 'rxjs';
+import { from, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ITrackingInfo, PackageTracker } from '../baseTracker';
 
@@ -7,6 +7,11 @@ const trackingBaseUrl = 'https://www.ups.com/track/api/Track/GetStatus?loc=en_US
 const STATUS_TYPES = ['D', 'P', 'M', 'I'];
 
 export class UPS extends PackageTracker {
+
+  public isTrackingNumberFromCarrier(): Observable<boolean> {
+    return of(true);
+  }
+
   protected getPackageInformationFromCarrier(): Observable<any> {
     const options = {
       body: {

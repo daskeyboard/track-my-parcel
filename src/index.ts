@@ -14,9 +14,11 @@ export const Track = (trackingNumber: string, callback: (infos: ITrackingInfo, e
   );
 };
 
-// const fedexTracker = new Fedex('785378216031');
-// fedexTracker.track().subscribe((infos) => {
-//   console.log(infos);
-// }, err => {
-//   console.error(err);
-// });
+const fedexTracker = new Fedex('785378216031');
+
+fedexTracker.isTrackingNumberFromCarrier().subscribe(result => {
+  console.log('result', result);
+}, err => {
+  console.error('err', err);
+})
+
