@@ -19,7 +19,13 @@ export abstract class PackageTracker {
    * Will get tracking information
    * @param trackingNumber
    */
-  public abstract getPackageInformation(): Observable<ITrackingInfo>;
+  public abstract getPackageInformationFromCarrier(): Observable<ITrackingInfo>;
+
+  /**
+   * Convert response from carrier to an ITrackingInfo
+   * @param response
+   */
+  protected abstract resolveCarrierResponseToITrackingInfo(response: any): ITrackingInfo;
 }
 
 /**

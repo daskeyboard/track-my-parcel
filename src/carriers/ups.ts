@@ -7,7 +7,7 @@ const trackingBaseUrl = 'https://www.ups.com/track/api/Track/GetStatus?loc=en_US
 const STATUS_TYPES = ['D', 'P', 'M', 'I'];
 
 export class UPS extends PackageTracker {
-  public getPackageInformation(): Observable<ITrackingInfo> {
+  public getPackageInformationFromCarrier(): Observable<ITrackingInfo> {
     const options = {
       body: {
         Locale: 'en_US',
@@ -30,16 +30,16 @@ export class UPS extends PackageTracker {
     // Pipe into the observable to transform the
     return observable.pipe(
       map((response: any) => {
-        return this.handleUPSResponse(response);
+        return this.resolveCarrierResponseToITrackingInfo(response);
       }),
     );
   }
 
   /**
-   * Convert UPS response to ITrackingInfo model
+   * Convert UPS response to ITrackingInfo interface
    * @param response
    */
-  private handleUPSResponse(response: any): ITrackingInfo {
+  protected resolveCarrierResponseToITrackingInfo(response: any): ITrackingInfo {
     let label = '';
     let percentage = 0;
     if (!response.trackDetails) {

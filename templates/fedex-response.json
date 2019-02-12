@@ -1,0 +1,713 @@
+{
+  "TrackPackagesResponse": {
+    "successful": true,
+    "passedLoggedInCheck": false,
+    "errorList": [
+      {
+        "code": "0",
+        "message": "Request was successfully processed.",
+        "source": null,
+        "rootCause": null
+      }
+    ],
+    "packageList": [
+      {
+        "trackingNbr": "785378216031",
+        "trackingQualifier": "12019\u007e785378216031\u007eFDEG",
+        "trackingCarrierCd": "FDXG",
+        "trackingCarrierDesc": "FedEx Ground",
+        "displayTrackingNbr": "785378216031",
+        "shipperCmpnyName": "",
+        "shipperName": "",
+        "shipperAddr1": "",
+        "shipperAddr2": "",
+        "shipperCity": "La Vista",
+        "shipperStateCD": "NE",
+        "shipperZip": "",
+        "shipperCntryCD": "US",
+        "shipperPhoneNbr": "",
+        "shippedBy": "",
+        "recipientCmpnyName": "",
+        "recipientName": "",
+        "recipientAddr1": "",
+        "recipientAddr2": "",
+        "recipientCity": "Austin",
+        "recipientStateCD": "TX",
+        "recipientZip": "",
+        "recipientCntryCD": "US",
+        "recipientPhoneNbr": "",
+        "shippedTo": "",
+        "keyStatus": "Delivered",
+        "keyStatusCD": "DL",
+        "lastScanStatus": "",
+        "lastScanDateTime": "",
+        "receivedByNm": "HHENUAN",
+        "subStatus": "Signed for by\u003a HHENUAN",
+        "mainStatus": "",
+        "statusBarCD": "DL",
+        "shortStatus": "",
+        "shortStatusCD": "",
+        "statusLocationAddr1": "",
+        "statusLocationAddr2": "",
+        "statusLocationCity": "Austin",
+        "statusLocationStateCD": "TX",
+        "statusLocationZip": "",
+        "statusLocationCntryCD": "US",
+        "statusWithDetails": "Delivered\u003a 2\u002f11\u002f2019 4\u003a11 pm Signed for by\u003aHHENUAN\u003b Austin, TX",
+        "halType": "",
+        "halCmpnyName": "",
+        "isHALAddress": false,
+        "shipDt": "2019\u002d02\u002d07T00\u003a00\u003a00\u002d06\u003a00",
+        "displayShipDt": "2\u002f07\u002f2019",
+        "displayShipTm": "",
+        "displayShipDateTime": "2\u002f07\u002f2019",
+        "pickupDt": "2019\u002d02\u002d07T00\u003a00\u003a00\u002d06\u003a00",
+        "displayPickupDt": "2\u002f07\u002f2019",
+        "displayPickupTm": "",
+        "displayPickupDateTime": "2\u002f07\u002f2019",
+        "estDeliveryDt": "",
+        "estDeliveryTm": "",
+        "displayEstDeliveryDt": "",
+        "displayEstDeliveryTm": "",
+        "displayEstDeliveryDateTime": "",
+        "actDeliveryDt": "2019\u002d02\u002d11T16\u003a11\u003a20\u002d06\u003a00",
+        "displayActDeliveryDt": "2\u002f11\u002f2019",
+        "displayActDeliveryTm": "4\u003a11 pm",
+        "displayActDeliveryDateTime": "2\u002f11\u002f2019 4\u003a11 pm",
+        "tenderedDt": "2019\u002d02\u002d07T00\u003a00\u003a00\u002d06\u003a00",
+        "displayTenderedDt": "2\u002f07\u002f2019",
+        "displayTenderedTm": "",
+        "displayTenderedDateTime": "2\u002f07\u002f2019",
+        "apptDeliveryDt": "",
+        "displayApptDeliveryDt": "",
+        "displayApptDeliveryTm": "",
+        "displayApptDeliveryDateTime": "",
+        "nickName": "",
+        "note": "",
+        "matchedAccountList": [
+          ""
+        ],
+        "fxfAdvanceETA": "",
+        "fxfAdvanceReason": "",
+        "fxfAdvanceStatusCode": "",
+        "fxfAdvanceStatusDesc": "",
+        "destLink": "",
+        "originLink": "",
+        "hasBillOfLadingImage": false,
+        "hasBillPresentment": false,
+        "signatureRequired": 0,
+        "totalKgsWgt": "",
+        "displayTotalKgsWgt": "",
+        "totalLbsWgt": "",
+        "displayTotalLbsWgt": "",
+        "displayTotalWgt": "",
+        "pkgKgsWgt": "2.72",
+        "displayPkgKgsWgt": "2.72 kgs",
+        "pkgLbsWgt": "6.0",
+        "displayPkgLbsWgt": "6 lbs",
+        "displayPkgWgt": "6 lbs \u002f 2.72 kgs",
+        "totalDIMLbsWgt": "",
+        "displayTotalDIMLbsWgt": "",
+        "totalDIMKgsWgt": "",
+        "displayTotalDIMKgsWgt": "",
+        "displayTotalDIMWgt": "",
+        "dimensions": "23x18x9 in.",
+        "masterTrackingNbr": "",
+        "masterQualifier": "",
+        "masterCarrierCD": "",
+        "originalOutboundTrackingNbr": null,
+        "originalOutboundQualifier": "",
+        "originalOutboundCarrierCD": "",
+        "invoiceNbrList": [
+          ""
+        ],
+        "referenceList": [
+          ""
+        ],
+        "doorTagNbrList": [
+          ""
+        ],
+        "referenceDescList": [
+          ""
+        ],
+        "purchaseOrderNbrList": [
+          ""
+        ],
+        "billofLadingNbrList": [
+          ""
+        ],
+        "shipperRefList": [
+          ""
+        ],
+        "rmaList": [
+          ""
+        ],
+        "deptNbrList": [
+          ""
+        ],
+        "shipmentIdList": [
+          ""
+        ],
+        "tcnList": [
+          ""
+        ],
+        "partnerCarrierNbrList": [
+          ""
+        ],
+        "hasAssociatedShipments": false,
+        "hasAssociatedReturnShipments": false,
+        "assocShpGrp": 0,
+        "drTgGrp": [
+          "0"
+        ],
+        "associationInfoList": [
+          {
+            "trackingNumberInfo": {
+              "trackingNumber": "",
+              "trackingQualifier": "",
+              "trackingCarrier": "",
+              "processingParameters": null
+            },
+            "associatedType": ""
+          }
+        ],
+        "returnReason": "",
+        "returnRelationship": null,
+        "skuItemUpcCdList": [
+          ""
+        ],
+        "receiveQtyList": [
+          ""
+        ],
+        "itemDescList": [
+          ""
+        ],
+        "partNbrList": [
+          ""
+        ],
+        "serviceCD": "FEDEX\u005fGROUND",
+        "serviceDesc": "FedEx Ground",
+        "serviceShortDesc": "FG",
+        "packageType": "PACKAGE",
+        "packaging": "Package",
+        "clearanceDetailLink": "",
+        "showClearanceDetailLink": false,
+        "manufactureCountryCDList": [
+          ""
+        ],
+        "commodityCDList": [
+          ""
+        ],
+        "commodityDescList": [
+          ""
+        ],
+        "cerNbrList": [
+          ""
+        ],
+        "cerComplaintCDList": [
+          ""
+        ],
+        "cerComplaintDescList": [
+          ""
+        ],
+        "cerEventDateList": [
+          ""
+        ],
+        "displayCerEventDateList": [
+          ""
+        ],
+        "totalPieces": "1",
+        "specialHandlingServicesList": [
+          ""
+        ],
+        "shipmentType": "",
+        "pkgContentDesc1": "",
+        "pkgContentDesc2": "",
+        "docAWBNbr": "",
+        "originalCharges": "",
+        "transportationCD": "",
+        "transportationDesc": "",
+        "dutiesAndTaxesCD": "",
+        "dutiesAndTaxesDesc": "",
+        "origPieceCount": "",
+        "destPieceCount": "",
+        "billNoteMsg": "",
+        "goodsClassificationCD": "",
+        "receipientAddrQty": "0",
+        "deliveryAttempt": "0",
+        "codReturnTrackNbr": "",
+        "returnMovementStatus": null,
+        "scanEventList": [
+          {
+            "date": "2019\u002d02\u002d11",
+            "time": "16\u003a11\u003a20",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Delivered",
+            "statusCD": "DL",
+            "scanLocation": "Austin, TX",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": true,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d11",
+            "time": "04\u003a37\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "On FedEx vehicle for delivery",
+            "statusCD": "OD",
+            "scanLocation": "PFLUGERVILLE, TX",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d09",
+            "time": "06\u003a25\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "On FedEx vehicle for delivery",
+            "statusCD": "OD",
+            "scanLocation": "PFLUGERVILLE, TX",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d09",
+            "time": "06\u003a20\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "At local FedEx facility",
+            "statusCD": "AR",
+            "scanLocation": "PFLUGERVILLE, TX",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d09",
+            "time": "01\u003a30\u003a37",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Departed FedEx location",
+            "statusCD": "DP",
+            "scanLocation": "FORT WORTH, TX",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d08",
+            "time": "22\u003a07\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Arrived at FedEx location",
+            "statusCD": "AR",
+            "scanLocation": "FORT WORTH, TX",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d08",
+            "time": "09\u003a29\u003a01",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Departed FedEx location",
+            "statusCD": "DP",
+            "scanLocation": "KANSAS CITY, MO",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d08",
+            "time": "03\u003a09\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Arrived at FedEx location",
+            "statusCD": "AR",
+            "scanLocation": "KANSAS CITY, MO",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d07",
+            "time": "22\u003a07\u003a38",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Left FedEx origin facility",
+            "statusCD": "DP",
+            "scanLocation": "COUNCIL BLUFFS, IA",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d07",
+            "time": "19\u003a10\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Arrived at FedEx location",
+            "statusCD": "AR",
+            "scanLocation": "COUNCIL BLUFFS, IA",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d07",
+            "time": "18\u003a21\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Picked up",
+            "statusCD": "PU",
+            "scanLocation": "COUNCIL BLUFFS, IA",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d07",
+            "time": "17\u003a06\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "Shipment information sent to FedEx",
+            "statusCD": "OC",
+            "scanLocation": "",
+            "scanDetails": "",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          },
+          {
+            "date": "2019\u002d02\u002d07",
+            "time": "17\u003a00\u003a00",
+            "gmtOffset": "\u002d06\u003a00",
+            "status": "In FedEx possession",
+            "statusCD": "IP",
+            "scanLocation": "OMAHA, NE",
+            "scanDetails": "Tendered at FedEx location",
+            "scanDetailsHtml": "",
+            "rtrnShprTrkNbr": "",
+            "isException": false,
+            "isClearanceDelay": false,
+            "isDelivered": false,
+            "isDelException": false
+          }
+        ],
+        "originAddr1": "",
+        "originAddr2": "",
+        "originCity": "COUNCIL BLUFFS",
+        "originStateCD": "IA",
+        "originZip": "",
+        "originCntryCD": "US",
+        "originLocationID": "",
+        "originTermCity": "COUNCIL BLUFFS",
+        "originTermStateCD": "IA",
+        "destLocationAddr1": "",
+        "destLocationAddr2": "",
+        "destLocationCity": "",
+        "destLocationStateCD": "",
+        "destLocationZip": "",
+        "destLocationCntryCD": "",
+        "destLocationID": "",
+        "destLocationTermCity": "",
+        "destLocationTermStateCD": "",
+        "destAddr1": "",
+        "destAddr2": "",
+        "destCity": "Austin",
+        "destStateCD": "TX",
+        "destZip": "",
+        "destCntryCD": "US",
+        "halAddr1": "",
+        "halAddr2": "",
+        "halCity": "",
+        "halStateCD": "",
+        "halZipCD": "",
+        "halCntryCD": "",
+        "actualDelAddrCity": "Austin",
+        "actualDelAddrStateCD": "TX",
+        "actualDelAddrZipCD": "",
+        "actualDelAddrCntryCD": "US",
+        "totalTransitMiles": "",
+        "excepReasonList": [
+          ""
+        ],
+        "excepActionList": [
+          ""
+        ],
+        "exceptionReason": "",
+        "exceptionAction": "",
+        "statusDetailsList": [
+          ""
+        ],
+        "trackErrCD": "",
+        "destTZ": "\u002d06\u003a00",
+        "originTZ": "\u002d06\u003a00",
+        "isMultiStat": "0",
+        "multiStatList": [
+          {
+            "multiPiec": "",
+            "multiTm": "",
+            "multiDispTm": "",
+            "multiSta": ""
+          }
+        ],
+        "maskMessage": "",
+        "deliveryService": "",
+        "milestoDestination": "",
+        "terms": "Shipper",
+        "payorAcctNbr": "",
+        "meterNumber": "",
+        "originUbanizationCode": "",
+        "originCountryName": "",
+        "isOriginResidential": false,
+        "halUrbanizationCD": "",
+        "halCountryName": "",
+        "actualDelAddrUrbanizationCD": "",
+        "actualDelAddrCountryName": "",
+        "destUrbanizationCD": "",
+        "destCountryName": "",
+        "delToDesc": "",
+        "recpShareID": "5tfhxipzf5nsd0yfh0vo1wjz6",
+        "shprShareID": "2xr164awrsbg9ivytqy23x3hu",
+        "requestedAppointmentInfoList": [
+          {
+            "spclInstructDesc": "",
+            "delivOptn": "",
+            "delivOptnStatus": "",
+            "reqApptWdw": "",
+            "reqApptDesc": "",
+            "rerouteTRKNbr": "",
+            "beginTm": "",
+            "endTm": ""
+          }
+        ],
+        "defaultCDOType": "CDO",
+        "returnAuthorizationName": "",
+        "totalCustomsValueAmount": "",
+        "totalCustomsValueCurrency": "",
+        "packageInsuredValueAmount": "",
+        "packageInsuredValueCurrency": "",
+        "estDelTimeWindow": {
+          "estDelTmWindowStart": "",
+          "estDelTmWindowEnd": "",
+          "displayEstDelTmWindowTmStart": "",
+          "displayEstDelTmWindowTmEnd": ""
+        },
+        "standardTransitTimeWindow": {
+          "stdTransitTimeStart": "",
+          "displayStdTransitTimeStart": "",
+          "stdTransitTimeEnd": "2019\u002d02\u002d11T00\u003a00\u003a00\u002d06\u003a00",
+          "displayStdTransitTimeEnd": ""
+        },
+        "standardTransitDate": {
+          "stdTransitDate": "2019\u002d02\u002d11T00\u003a00\u003a00\u002d06\u003a00",
+          "displayStdTransitDate": "2\u002f11\u002f2019"
+        },
+        "pkgDimIn": "23x18x9 in.",
+        "pkgDimCm": "58.42x45.72x22.86 cms",
+        "returnedToShipperTrackNbr": "",
+        "commodityInfoList": [
+          {
+            "countryOfManufacture": "",
+            "harmonizedCode": "",
+            "description": ""
+          }
+        ],
+        "statusActionDesc": "",
+        "destinationGeoCoordinate": null,
+        "serviceCommitMessage": "",
+        "serviceCommitMessageType": "",
+        "lastUpdateDestinationAddress": {
+          "streetLineList": [],
+          "city": "AUSTIN",
+          "stateOrProvinceCode": "TX",
+          "postalCode": "",
+          "countryCode": "US",
+          "residential": false,
+          "addressVerificationId": "5tfhxipzf5nsd0yfh0vo1wjz6",
+          "shareId": null,
+          "addressClassification": null,
+          "addressClassificationConfidence": null,
+          "classification": null,
+          "urbanizationCode": null,
+          "countryName": "United States",
+          "geographicCoordinates": null,
+          "processingParameters": null
+        },
+        "halAddressLocationId": null,
+        "streetGeoCoordinate": null,
+        "isIndirectSignatureReleaseEligible": false,
+        "isRerouteEligible": false,
+        "isRescheduleEligible": false,
+        "brokerName": "",
+        "brokerCompanyName": "",
+        "buyerSoldToPartyName": "",
+        "buyerSoldToPartyCompanyName": "",
+        "importerOfRecordCompanyName": "",
+        "importerOfRecordName": "",
+        "consolidationDetails": null,
+        "exclusionReasonDetails": null,
+        "piecesPerShipment": "1",
+        "totalPiecesPerMPSShipment": "0",
+        "matched": false,
+        "fxfAdvanceNotice": true,
+        "codrequired": false,
+        "mpstype": "",
+        "rthavailableCD": "",
+        "excepReasonListNoInit": [
+          ""
+        ],
+        "excepActionListNoInit": [
+          ""
+        ],
+        "statusDetailsListNoInit": [
+          ""
+        ],
+        "isException": false,
+        "isConsolidationDetail": false,
+        "isSuccessful": true,
+        "isDuplicate": false,
+        "isPrePickup": false,
+        "isPickup": false,
+        "isShipmentException": false,
+        "isClearanceDelay": false,
+        "isDelivered": true,
+        "isPending": false,
+        "isInFedExPossession": false,
+        "isDroppedOff": false,
+        "isInvalid": false,
+        "errorList": [
+          {
+            "code": "",
+            "message": "",
+            "source": null,
+            "rootCause": null
+          }
+        ],
+        "isCanceled": false,
+        "isExpiring": false,
+        "isGMPS": false,
+        "isMPS": false,
+        "isReturn": false,
+        "isResidential": false,
+        "isDeliveryToday": false,
+        "isDocumentAvailable": false,
+        "isSave": false,
+        "isHistorical": false,
+        "isTenderedNotification": false,
+        "isDeliveredNotification": true,
+        "isExceptionNotification": false,
+        "isEstimatedDeliveryDateChangeNotification": false,
+        "isCurrentStatusNotification": false,
+        "isAnticipatedShipDtLabel": false,
+        "isShipPickupDtLabel": true,
+        "isActualPickupLabel": false,
+        "isOrderReceivedLabel": false,
+        "isEstimatedDeliveryDtLabel": false,
+        "isDeliveryDtLabel": false,
+        "isActualDeliveryDtLabel": true,
+        "isOrderCompleteLabel": false,
+        "isTenderedDtLabel": false,
+        "isShipDtLabel": false,
+        "isEstDelTmWindowLabel": false,
+        "isUnknownDirection": false,
+        "isSpod": true,
+        "isSignatureAvailable": true,
+        "isSignatureThumbnailAvailable": false,
+        "isOriginalOutBound": false,
+        "isChildPackage": false,
+        "isParentPackage": false,
+        "isReclassifiedAsSingleShipment": false,
+        "isMaskShipper": false,
+        "isHalEligible": false,
+        "isFedexOfficeOnlineOrders": false,
+        "isFedexOfficeInStoreOrders": false,
+        "isMultipleStop": false,
+        "isHALResidential": false,
+        "isActualDelAddrResidential": false,
+        "isReqEstDelDt": false,
+        "isMtchdByRecShrID": false,
+        "isMtchdByShiprShrID": false,
+        "isHistoricalEDTW": false,
+        "isNonHistoricalEDTW": false,
+        "isTargetedMsg": false,
+        "isCommodityInfoAvail": false,
+        "isStreetMapEligible": false,
+        "CDOInfoList": [
+          {
+            "spclInstructDesc": "",
+            "delivOptn": "",
+            "delivOptnStatus": "",
+            "reqApptWdw": "",
+            "reqApptDesc": "",
+            "rerouteTRKNbr": "",
+            "beginTm": "",
+            "endTm": ""
+          }
+        ],
+        "isInProgress": true,
+        "isExpired": false,
+        "isExclusionReason": false,
+        "isNotFound": false,
+        "isFSM": false,
+        "isFreight": false,
+        "isCustomCritical": false,
+        "isCDOEligible": false,
+        "CDOExists": false,
+        "isInTransit": false,
+        "isOnSchedule": false,
+        "isDelException": false,
+        "isHAL": false,
+        "isBeforePossessionStatus": false,
+        "isWatch": false,
+        "isOutboundDirection": false,
+        "isInboundDirection": false,
+        "isThirdpartyDirection": false,
+        "isDestResidential": true
+      }
+    ],
+    "alerts": null,
+    "cxsalerts": null
+  }
+}
