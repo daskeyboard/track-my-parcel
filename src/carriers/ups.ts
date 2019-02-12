@@ -7,11 +7,23 @@ import { handleError } from '../utilities';
 const trackingBaseUrl = 'https://www.ups.com/track/api/Track/GetStatus?loc=en_US';
 
 export class UPS extends PackageTracker {
+
+  constructor(trackingNumber: string) {
+    super(trackingNumber);
+    this.carrierName = 'UPS';
+  }
+  
   public isTrackingNumberFromCarrier(): Observable<boolean> {
     return this.getPackageInformationFromCarrier().pipe(
       map((response: any) => {
-        // A valid tracking number will return a status code of 200
-        return +response.statusCode === 200;
+        if (response && +response.statusCode === 200
+          && response.trackDetails
+          && response.trackDetails.length > 0
+          && +response.trackDetails[0].errorCode === 0) {
+          return true
+        } else {
+          return false;
+        }
       }),
       catchError(handleError(`isTrackingNumberFromCarrier UPS`, false)),
     );
