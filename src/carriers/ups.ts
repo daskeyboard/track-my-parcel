@@ -59,18 +59,26 @@ export class UPS extends PackageTracker {
   protected resolveCarrierResponseToITrackingInfo(response: any): ITrackingInfo {
     let label = '';
     let percentage = 0;
-    if (!response.trackDetails) {
+    const details = response.trackDetails;
+    if (!details) {
       throw new Error(`Error when handling response from UPS`);
     }
-    if (response.trackDetails.length > 0) {
-      label = response.trackDetails[0].packageStatus;
-      percentage = response.trackDetails[0].progressBarPercentage;
+    if (details.length > 0) {
+      label = details[0].packageStatus;
+      percentage = details[0].progressBarPercentage;
+      if (!percentage) {
+        switch (details[0].progressBarType) {
+          case 'OutForDelivery':
+            percentage = 90;
+            break;
+        }
+      }
     }
     return {
       carrierName: this.carrierName,
       detailsLink: this.getDetailsLink(),
       statusLabel: label,
-      statusPercentage: percentage,
+      statusPercentage: +percentage,
     } as ITrackingInfo;
   }
 
