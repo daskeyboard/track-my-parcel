@@ -108,8 +108,13 @@ export class Fedex extends PackageTracker {
 
     return {
       carrierName: this.carrierName,
+      detailsLink: this.getDetailsLink(),
       statusLabel: label,
       statusPercentage: percentage,
     } as ITrackingInfo;
+  }
+
+  private getDetailsLink(): string {
+    return `https://www.fedex.com/apps/fedextrack/?tracknumbers=${this.trackingNumber}`;
   }
 }
