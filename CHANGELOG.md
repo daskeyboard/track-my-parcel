@@ -1,3 +1,9 @@
+#### 1.0.7 (2019-02-14)
+
+##### Bug Fixes
+
+* **Fedex:**  Percentage for In transit status will be 75 % ([aa7ed0f8](https://github.com/daskeyboard/track-my-parcel/commit/aa7ed0f8a84e31d979ba53b6996919705c403431))
+
 #### 1.0.5 (2019-02-13)
 
 ##### New Features
