@@ -50,6 +50,6 @@ export const Track = (trackingNumber: string, callback: (infos: ITrackingInfo, e
   );
 };
 
-Track('479242596176', (infos) => {
-  console.log('infos', infos);
-});
+// Track('479242596176', (infos) => {
+//   console.log('infos', infos);
+// });
