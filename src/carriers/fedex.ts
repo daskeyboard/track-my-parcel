@@ -96,10 +96,10 @@ export class Fedex extends PackageTracker {
       case 'Picked up':
         percentage = 50;
         break;
-      case 'In Transit':
+      case 'In transit': // keyStatusCD "LO"
         percentage = 75;
         break;
-      case 'Delivered':
+      case 'Delivered': // TODO MAKE SURE keyStatusCD "DL"
         percentage = 100;
         break;
       default:
